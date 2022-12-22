@@ -40,7 +40,7 @@ let company = { // тот же самый объект, сжатый для кр
   }
   console.log(sumSalaries(company)) 
   */
-  
+
 function sumTo(n) {
     /* let sum = 0
     for(let i =0; i<=n;i++){
@@ -49,23 +49,23 @@ function sumTo(n) {
     return sum 
     */
 
-/* 
-if(n==1){
-    return n
-}else{
-    return n+sumTo(n-1)
-}
- */
+    /* 
+    if(n==1){
+        return n
+    }else{
+        return n+sumTo(n-1)
+    }
+     */
 
-return (n*(n+1)/2)
+    return (n * (n + 1) / 2)
 
 }
 console.log(sumTo(100))
 
 function factorial(n) {
-    if(n!=1){
-        return n*factorial(n-1)
-    }else{
+    if (n != 1) {
+        return n * factorial(n - 1)
+    } else {
         return n
     }
 }
@@ -73,12 +73,12 @@ console.log(factorial(3))
 
 
 function fib(n) {
-    let a =1;
-    let b= 1;
-    for(let i = 3; i<=n; i++){
-        let c = a+b;
-        a=b;
-        b=c
+    let a = 1;
+    let b = 1;
+    for (let i = 3; i <= n; i++) {
+        let c = a + b;
+        a = b;
+        b = c
     }
     return b
 }
@@ -89,41 +89,39 @@ console.log(fib(7))
 let list = {
     value: 1,
     next: {
-      value: 2,
-      next: {
-        value: 3,
+        value: 2,
         next: {
-          value: 4,
-          next: null
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
         }
-      }
     }
-  };
+};
 
 function printList(list) {
-    /* let tmp = list;
-    while(tmp){
-        console.log(tmp.value);
-        tmp = tmp.next
-        
-    } */
-    
-  /*   console.log(list.value)
+    /*  let tpm = list;
+     while(tpm){
+         console.log(tpm.value);
+         tpm = tpm.next
+     } */
+    /* console.log(list.value);
     if(list.next){
         printList(list.next)
-        
     } */
-    let arr = [];
-    let tmp = list;
-    while(tmp){
-        arr.push(tmp.value);
-        tmp = tmp.next
-    }
-    for( let i = arr.length-1; i>=0; i--){
-        console.log(arr[i])
-        
-    }
-    
+/* let arr =[];
+let tpm = list;
+while(tpm){
+    arr.push(tpm.value)
+    tpm = tpm.next
 }
-printList(list)
+for(let i = arr.length-1;i>=0;i--){
+    console.log(arr[i]);
+} */
+if(list.next){
+   printList(list.next)
+}console.log(list.value);
+}
+printList(list);
 
